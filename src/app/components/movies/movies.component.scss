@@ -1,0 +1,40 @@
+.div{
+  background-color: gray;
+}
+.card {
+    display: inline-block;
+    animation-name: appear;
+    animation-duration: .5s;
+    animation-fill-mode: backwards;
+    background-color: black;
+    color: greenyellow;
+    margin: 20px;
+    padding: 20px;
+    font-style: italic;
+}
+
+img {
+    cursor: pointer;
+    transition: .5s all ease 0s;
+}
+
+img:hover {
+    filter: brightness(3);
+}
+
+button {
+    border-color: #ff9900;
+    position: relative;
+    margin-left: auto;
+    font-style: italic;
+    color: white;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

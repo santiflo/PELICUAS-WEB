@@ -1,0 +1,36 @@
+.error{
+  background: black;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  height: 550px;
+  font-family: 'Boogaloo';
+  padding: 0 1.5em;
+}
+
+h1{
+  font-weight: bold;
+}
+
+h2{
+  font-weight: 200;
+}
+
+a{
+  color: gray;
+  text-decoration: none;
+  font-size: 18px;
+  transition: all 0.5s ease-out;
+}
+
+a:hover{
+  margin-left: -20px
+}
+ p {
+   font-family: 'Boogaloo' cursive;
+ }
+
+ i{
+   margin-right: 8px;
+   color: green;
+ }

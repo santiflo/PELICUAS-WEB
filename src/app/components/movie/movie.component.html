@@ -1,0 +1,24 @@
+<div id="movie-component" *ngIf='movie && cast'>
+    <h2>{{movie.title}}</h2>
+    <img [src]="this.imgURL+movie.backdrop_path" class="img-rounded" [alt]="movie.title">
+    <p>{{movie.overview}}</p>
+    <ul *ngFor="let similar of similarMovies; let i=index">
+        <li (click)="goMovie(similar.id)" *ngIf="i<5">
+            {{similar.title}}
+        </li>
+
+    </ul>
+    <h3> Elenco Principal
+    </h3>
+
+
+    <div style="width: 10rem;">
+        <ul *ngFor="let castPrincipal of cast; let i=index">
+            <li (click)="goMovie(cast.id)" *ngIf="i<5">
+                <img [src]="this.imgURL+castPrincipal.profile_path" class="card-img-top"> {{castPrincipal.character}} | {{castPrincipal.name}}
+            </li>
+        </ul>
+    </div>
+
+
+</div>

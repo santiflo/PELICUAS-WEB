@@ -1,0 +1,14 @@
+<div *ngIf='person'>
+    <img [src]="this.imgURL+person.profile_path" [alt]="person.name">
+    <h2>{{person.name}}</h2>
+    <p>Fecha de nacimiento: {{person.birthday}}</p>
+    <h3>Biografía:</h3>
+    <p>{{person.biography}}</p>
+    <hr>
+    <h3>Conocido por:</h3>
+    <div *ngFor="let cast of movieCredits.cast">
+        <h4>{{cast.title}}:</h4>
+        <p>{{cast.character}}</p>
+        <img [src]="this.imgURL+cast.poster_path " (click)="goMovie(cast.id)">
+    </div>
+</div>
