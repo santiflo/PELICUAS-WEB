@@ -3,8 +3,11 @@
 
 Proyecto de un desarrollo web con el framework Angular con base logico en HTML y estilos SCSS.
 
-La pagina web es con la temática de peliculas que cuenta con los componentes de: 
+La pagina web es con la tematica de peliculas que cuenta con los componentes de:
 
-* Peliculas populares junto a un resumen de ella
+* Pagina de inicio 
+* Peliculas populares
+* Detalle de la pelicula junto al reparto
 * Actores populares con las peliculas en las que han interpretado un papel
-* Formulario de contacto 
+* Detalle de actor
+* Formulario de contacto
