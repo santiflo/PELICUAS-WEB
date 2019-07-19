@@ -10,8 +10,6 @@
     </ul>
     <h3> Elenco Principal
     </h3>
-
-
     <div style="width: 10rem;">
         <ul *ngFor="let castPrincipal of cast; let i=index">
             <li (click)="goMovie(cast.id)" *ngIf="i<5">

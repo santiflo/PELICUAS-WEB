@@ -1,14 +1,41 @@
-<div *ngIf='person'>
-    <img [src]="this.imgURL+person.profile_path" [alt]="person.name">
-    <h2>{{person.name}}</h2>
-    <p>Fecha de nacimiento: {{person.birthday}}</p>
-    <h3>Biografía:</h3>
-    <p>{{person.biography}}</p>
-    <hr>
-    <h3>Conocido por:</h3>
-    <div *ngFor="let cast of movieCredits.cast">
-        <h4>{{cast.title}}:</h4>
-        <p>{{cast.character}}</p>
-        <img [src]="this.imgURL+cast.poster_path " (click)="goMovie(cast.id)">
+<body>
+    <div class="card mb-3" style=" width:300;height:300px;"  *ngIf='person'>
+        <img [src]="this.imgURL+person.profile_path" style=" width:300 height:300px;" [alt]="person.name" class="card-img-top">
+        <div class="card body">
+          <h2 class="card-title">{{person.name}}</h2>
+          <p class="card-text">Fecha de nacimiento: {{person.birthday}}</p>
+          <h3>Biografía:</h3>
+           <p>{{person.biography}}</p>
+          <hr>
+        </div>
+      </div>
+</body>
+
+<div class="card-deck">
+  <div class="card" *ngFor="let cast of movieCredits.cast">
+    <img [src]="this.imgURL+cast.poster_path"  (click)="goMovie(cast.id)">
+    <div class="card-body">
+      <h4 class="card-title">{{cast.title}}:</h4>
+      <p class="card-text">{{cast.character}}</p>
     </div>
+  </div>
 </div>
+
+<!-- ## carousel
+<div class="bd-example">
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img [src]="this.imgURL+cast.poster_path"  (click)="goMovie(cast.id)"  alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>First slide label</h5>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </div> -->

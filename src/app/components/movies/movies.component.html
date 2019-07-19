@@ -1,11 +1,13 @@
-<div class="card" style="width: 20rem;" *ngFor='let movie of movies'>
-    <img (click)="goMovie(movie.id)" [src]="this.imgURL+movie.backdrop_path" class="card-img-top" [alt]="movie.title">
+<body>
+  <div class="card" style="width: 20rem;" *ngFor='let movie of movies'>
+      <img (click)="goMovie(movie.id)" [src]="this.imgURL+movie.backdrop_path" class="card-img-top" [alt]="movie.title">
+      <div class="card-body">
+          <h5 class="card-title">{{movie.title}}</h5>
+          <!--<a [routerLink]="['/movie', movie.id]">details...</a><br>-->
+          <hr>
+          <button (click)="goMovie(movie.id)" class="btn btn-primarybtn-lg btn-block">Info</button>
+      </div>
 
-    <div class="card-body">
-        <h5 class="card-title">{{movie.title}}</h5>
-        <!--<a [routerLink]="['/movie', movie.id]">details...</a><br>-->
-        <hr>
-        <button (click)="goMovie(movie.id)" class="btn btn-primarybtn-lg btn-block">Info</button>
-    </div>
+  </div>
 
-</div>
+</body>
